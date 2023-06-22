@@ -16,7 +16,7 @@ namespace SampleConsole
 
         static async void CheckForUpdates()
         {
-            using (var manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/meJevin/WPFCoreTest"))
+            using (var manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/13ankyroy/Demo_Squirrel_public-"))
             {
                 await manager.UpdateApp();
             }
