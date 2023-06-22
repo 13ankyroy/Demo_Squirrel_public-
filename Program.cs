@@ -18,7 +18,13 @@ namespace SampleConsole
         {
             using (var manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/13ankyroy/Demo_Squirrel_public-"))
             {
-                await manager.UpdateApp();
+                Console.WriteLine(manager.CurrentlyInstalledVersion().ToString());
+                var updateInfo = await manager.CheckForUpdate();
+                if(updateInfo.ReleasesToApply.Count > 0) 
+                {
+                    await manager.UpdateApp();  
+                }
+                
             }
         }
     }
