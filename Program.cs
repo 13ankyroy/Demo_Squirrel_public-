@@ -8,8 +8,7 @@ namespace SampleConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-
-
+            Console.ReadLine();
             CheckForUpdates();
 
         }
@@ -27,5 +26,7 @@ namespace SampleConsole
                 
             }
         }
-    }
+
+        }
+
 }
